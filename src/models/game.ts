@@ -5,7 +5,7 @@ export class Game {
     public currentPlayer: number = 0;
 
     constructor() {
-        for (let index = 0; index < 14; index++) {
+        for (let index = 1; index < 14; index++) {
             this.stack.push('spade_' + index);
             this.stack.push('hearts_' + index);
             this.stack.push('clubs_' + index);

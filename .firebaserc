@@ -1,0 +1,18 @@
+{
+  "targets": {
+    "ring-of-fire-fffb6": {
+      "hosting": {
+        "ringoffire": [
+          "ring-of-fire-fffb6"
+        ]
+      }
+    },
+    "ring-of-fire-5a7f1": {
+      "hosting": {
+        "ringoffire": [
+          "ring-of-fire-5a7f1"
+        ]
+      }
+    }
+  }
+}

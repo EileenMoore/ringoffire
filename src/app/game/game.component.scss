@@ -8,11 +8,36 @@
     align-items: center;
 }
 
+.player-container {
+    position: absolute;
+    top: 0;
+    bottom: 140px;
+    right: 0;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+app-player {
+    padding-top: 12px;
+}
+
+app-player,
+app-player-mobile {
+    cursor: pointer;
+    &:hover {
+        filter: brightness(1.15);
+    }
+}
+
 .card-stack {
     position: relative;
     img {
         position: absolute;
         width: 120px;
+        @media(max-width: 720px) {
+            width: 80px;
+        }
     }
 }
 
@@ -50,8 +75,6 @@
 }
 
 .player-position {
-    position: absolute;
-    right: 0;
     z-index: 1;
 }
 
@@ -71,4 +94,13 @@
         right: 0;
         bottom: 0;
     }
+}
+
+.scroll-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-x: auto;
 }

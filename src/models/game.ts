@@ -1,5 +1,6 @@
 export class Game {
     public players: string[] = [];
+    public player_images: string[] = [];
     public stack: string[] = [];
     public playedCards: string[] = [];
     public currentPlayer: number = 0;
@@ -7,7 +8,7 @@ export class Game {
     public currentCard: string = '';
 
     constructor() {
-        for (let index = 1; index < 14; index++) {
+        for (let index = 1; index < 2; index++) {
             this.stack.push('spade_' + index);
             this.stack.push('hearts_' + index);
             this.stack.push('clubs_' + index);
@@ -21,6 +22,7 @@ export class Game {
     public toJson() {
         return {
             players: this.players,
+            player_images: this.player_images,
             stack: this.stack,
             playedCards: this.playedCards,
             currentPlayer: this.currentPlayer,

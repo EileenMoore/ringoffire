@@ -8,7 +8,7 @@ export class Game {
     public currentCard: string = '';
 
     constructor() {
-        for (let index = 1; index < 2; index++) {
+        for (let index = 1; index < 14; index++) {
             this.stack.push('spade_' + index);
             this.stack.push('hearts_' + index);
             this.stack.push('clubs_' + index);

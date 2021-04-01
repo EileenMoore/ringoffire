@@ -2,7 +2,6 @@
     width: 100vw;
     height: 100vh;
     max-width: 100%;
-    background-image: url("/assets/img/board.png");
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,6 +15,15 @@
     overflow-y: auto;
     display: flex;
     flex-direction: column;
+}
+
+.gameOver {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+        width: 300px;
+    }
 }
 
 app-player {
@@ -52,6 +60,10 @@ app-player-mobile {
 .pick-card {
     animation: pick-card-animation 1s ease-in-out;
     transform: scale(1.3) translateX(140px) translateY(-180px) rotate(-10deg);
+    @media(max-width: 720px) {
+        animation: pick-card-animation 1s ease-in-out;
+        transform: scale(1.3) translateX(80px) translateY(-100px) rotate(-10deg);
+    }
 }
 
 @keyframes pick-card-animation {
@@ -82,6 +94,9 @@ app-player-mobile {
     position: absolute;
     right: 32px;
     bottom: 32px;
+    @media(max-width: 720px) {
+        bottom: 190px;
+    }
 }
 
 .pin-bottom {
@@ -101,6 +116,15 @@ app-player-mobile {
     top: 0;
     left: 0;
     right: 0;
-    bottom: 0;
     overflow-x: auto;
+    display: flex;
+}
+
+app-player-mobile {
+    padding-left: 4px;
+}
+
+.preloadImage {
+    opacity: 0;
+    z-index: -999999999;
 }

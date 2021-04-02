@@ -59,10 +59,8 @@ app-player-mobile {
 
 .pick-card {
     animation: pick-card-animation 1s ease-in-out;
-    transform: scale(1.3) translateX(140px) translateY(-180px) rotate(-10deg);
     @media(max-width: 720px) {
-        animation: pick-card-animation 1s ease-in-out;
-        transform: scale(1.3) translateX(80px) translateY(-100px) rotate(-10deg);
+        animation: pick-card-animation2 1s ease-in-out;
     }
 }
 
@@ -81,9 +79,27 @@ app-player-mobile {
     }
 }
 
+@keyframes pick-card-animation2 {
+    0% {
+        transform: scale(1);
+    }
+    40% {
+        transform: scale(1.7);
+    }
+    60% {
+        transform: scale(1.7);
+    }
+    100% {
+        transform: scale(1.3) translateX(80px) translateY(-140px) rotate(-10deg);
+    }
+}
+
 .played-card {
     right: 25px;
     transform: scale(1.3) translateX(140px) translateY(-180px) rotate(-10deg);
+    @media(max-width: 720px) {
+        transform: scale(1.3) translateX(80px) translateY(-140px) rotate(-10deg);
+    }
 }
 
 .player-position {
@@ -118,10 +134,13 @@ app-player-mobile {
     right: 0;
     overflow-x: auto;
     display: flex;
+    margin-right: 4px;
+    padding-left: 4px;
 }
 
 app-player-mobile {
-    padding-left: 4px;
+    padding-left: 2px;
+    padding-right: 2px;
 }
 
 .preloadImage {
